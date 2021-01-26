@@ -7,7 +7,7 @@ public class Model {
 
     public static void main(String[] args)
     {
-        
+
     }
     public static void changeColorViaAbsoluteValue(ColorCode cc, int value) {
         switch (cc) {

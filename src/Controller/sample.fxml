@@ -23,11 +23,11 @@
    </rowConstraints>
    <children>
       <Label text="Red" />
-      <TextField fx:id="red" promptText="0" GridPane.rowIndex="1" />
+      <TextField fx:id="red" onKeyReleased="#absoluteInput" promptText="0" GridPane.rowIndex="1" />
       <Label text="Green" GridPane.rowIndex="2" />
-      <TextField fx:id="green" promptText="0" GridPane.rowIndex="3" />
+      <TextField fx:id="green" onKeyReleased="#absoluteInput" promptText="0" GridPane.rowIndex="3" />
       <Label text="Blue" GridPane.rowIndex="4" />
-      <TextField fx:id="blue" promptText="0" GridPane.rowIndex="5" />
+      <TextField fx:id="blue" onKeyReleased="#absoluteInput" promptText="0" GridPane.rowIndex="5" />
       <Button fx:id="increase_red" mnemonicParsing="false" prefHeight="17.0" prefWidth="94.0" text="+ 10" GridPane.columnIndex="1" />
       <Button fx:id="decrease_red" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" text="- 10" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Button fx:id="increase_green" mnemonicParsing="false" prefHeight="28.0" prefWidth="94.0" text="+ 10" GridPane.columnIndex="1" GridPane.rowIndex="2" />
