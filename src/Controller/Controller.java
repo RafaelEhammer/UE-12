@@ -23,6 +23,12 @@ public class Controller implements Initializable
     Button color = new Button();
     @FXML
     Label hex = new Label();
+    @FXML
+    TextField red = new TextField();
+    @FXML
+    TextField blue = new TextField();
+    @FXML
+    TextField green = new TextField();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
@@ -61,8 +67,25 @@ public class Controller implements Initializable
         hex.setText(hexCode);
         color.setStyle("-fx-background-color: " + hexCode + ";");
     }
-    public static void relativeInput (Event event)
+    public void relativeInput (Event event)
     {
-
+        Button button = (Button) event.getSource();
+        if (button.getId().contains("red"))
+        {
+            Model.changeColorViaRelativeValue(ColorCode.RED, button.getText());
+            red.setText(" " + Model.getRed());
+        }
+        else if (button.getId().contains("green"))
+        {
+            Model.changeColorViaRelativeValue(ColorCode.GREEN, button.getText());
+            green.setText(" " + Model.getGreen());
+        }
+        else{
+            Model.changeColorViaRelativeValue(ColorCode.BLUE, button.getText());
+            blue.setText(" " + Model.getBlue());
+        }
+        String hexCode = Model.getHex();
+        hex.setText(hexCode);
+        color.setStyle("-fx-background-color: " + hexCode + ";");
     }
 }
