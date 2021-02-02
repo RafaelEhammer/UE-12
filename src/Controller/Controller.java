@@ -13,7 +13,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import Model.Model;
-import java.io.IOException;
+
+import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -88,4 +89,5 @@ public class Controller implements Initializable
         hex.setText(hexCode);
         color.setStyle("-fx-background-color: " + hexCode + ";");
     }
+    
 }
