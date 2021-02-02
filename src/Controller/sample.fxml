@@ -37,7 +37,8 @@
       <Button fx:id="decrease_blue" mnemonicParsing="false" onAction="#relativeInput" prefHeight="23.0" prefWidth="94.0" text="- 10" GridPane.columnIndex="1" GridPane.rowIndex="5" />
       <Label fx:id="hex" text="Hex: 000000" GridPane.columnIndex="2" GridPane.rowIndex="4" />
       <Button fx:id="color" mnemonicParsing="false" prefHeight="56.0" prefWidth="68.0" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.rowSpan="2147483647" />
-      <Button mnemonicParsing="false" text="Load" GridPane.columnIndex="3" />
-      <Button mnemonicParsing="false" text="Save" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#loadFromFile" prefHeight="25.0" prefWidth="221.0" text="Load" GridPane.columnIndex="3" />
+      <Button mnemonicParsing="false" onAction="#saveToFile" prefHeight="25.0" prefWidth="221.0" text="Save" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Label fx:id="label" prefHeight="26.0" prefWidth="220.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
    </children>
 </GridPane>

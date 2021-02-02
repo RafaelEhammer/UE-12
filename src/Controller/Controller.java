@@ -20,6 +20,9 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable
 {
+    Model model = new Model();
+    @FXML
+    Label label;
     @FXML
     Button color = new Button();
     @FXML
@@ -40,7 +43,7 @@ public class Controller implements Initializable
             Parent root = fxmlLoader.load();
 
             stage.setTitle("Welcome");
-            stage.setScene(new Scene(root,350,250));
+            stage.setScene(new Scene(root,550,250));
             stage.show();
 
     }
@@ -89,5 +92,22 @@ public class Controller implements Initializable
         hex.setText(hexCode);
         color.setStyle("-fx-background-color: " + hexCode + ";");
     }
-    
+    public void loadFromFile ()
+    {
+        model.loadFromFile();
+        String hexCode = Model.getHex();
+        hex.setText(hexCode);
+        color.setStyle("-fx-background-color: " + hexCode + ";");
+
+        red.setText(String.valueOf(model.getRed()));
+        green.setText(String.valueOf(model.getGreen()));
+        blue.setText(String.valueOf(model.getBlue()));
+
+        label.setText("HexCode was implemented from File");
+    }
+    public void saveToFile()
+    {
+        model.saveFromFile();
+        label.setText("HexCode was saved to File");
+    }
 }
